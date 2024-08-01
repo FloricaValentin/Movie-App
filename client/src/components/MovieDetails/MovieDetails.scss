@@ -1,0 +1,112 @@
+$primary-color: #FFD700;
+$primary-hover-color: #DAA520;
+$error-color: #e74c3c;
+$input-border: #6A1B1A;
+$input-border-focus: #FFD700;
+$background-color: #0D0D0D;
+$text-color: #FFF8DC;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+.movie-detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  position: relative;
+  overflow: hidden; 
+}
+
+.movie-detail-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 800px; 
+  box-sizing: border-box;
+  margin-top: 50px;
+  overflow-y: auto; 
+  max-height: 90vh; 
+}
+
+.movie-poster {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.movie-detail-content {
+  width: 100%;
+  margin-left: 0;
+}
+
+.genres, .production-companies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.genre, .company {
+  background-color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.genre {
+  background-color: #444;
+}
+
+.production-companies .company {
+  background-color: #555;
+}
+
+.back-button {
+  background-color: #555;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.back-button:hover {
+  background-color: #666;
+}
+
+@media (min-width: 768px) {
+  .movie-detail-overlay {
+    flex-wrap: nowrap;
+  }
+
+  .movie-poster {
+    max-width: 300px;
+  }
+
+  .movie-detail-content {
+    width: 70%;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .movie-poster {
+    max-height: 200px;
+    min-width: 270px;
+  }
+}
